@@ -1,0 +1,31 @@
+What a commit is:
+
+To permanently save changes to the Git repository, you must issue a commit, and that commit must be associated with a message that describes the commit.
+Furthermore, Git keeps track of the name and email address of the user that makes the commit, which is why you need to provide that information through the git config command.
+To issue a commit, use the -m switch to provide a text message that describes the commit. 
+If you don't use the -m command, Git will ask for input through a vi editor in the Bash shell, which tends to throw Git beginners for a nasty loop.
+So, make life easy for yourself, and always include the -m switch.
+
+What the point of the git log command is:
+
+
+
+By default, with no arguments, git log lists the commits made in that repository in reverse chronological order — that is, the most recent commits show up first. As you can see, this command lists each commit with its SHA-1 checksum, the author’s name and email, the date written, and the commit message.
+
+A huge number and variety of options to the git log command are available to show you exactly what you’re looking for. 
+Here, we’ll show you some of the most popular.
+
+One of the more helpful options is -p or --patch, which shows the difference (the patch output) introduced in each commit. 
+You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.
+
+
+What a branch is.
+
+A branch in Git is simply a lightweight movable pointer to one of these commits. 
+The default branch name in Git is master.
+As you start making commits, you’re given a master branch that points to the last commit you made. 
+Every time you commit, the master branch pointer moves forward automatically.
+
+note That:The “master” branch in Git is not a special branch. 
+It is exactly like any other branch. 
+The only reason nearly every repository has one is that the git init command creates it by default and most people don’t bother to change it.
